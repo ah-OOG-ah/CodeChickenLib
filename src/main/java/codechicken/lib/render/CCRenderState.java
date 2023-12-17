@@ -339,6 +339,7 @@ public class CCRenderState {
 
     public static void render() {
         Vertex5[] verts = model.getVertices();
+        if (verts == null) return;
         for (vertexIndex = firstVertexIndex; vertexIndex < lastVertexIndex; vertexIndex++) {
             model.prepareVertex();
             vert.set(verts[vertexIndex]);
